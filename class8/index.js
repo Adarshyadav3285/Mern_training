@@ -1,9 +1,9 @@
-// // // function-: reusable block of code hota hai jiska kaam kisi particular task ko karana hota hai
-// // // Normal function without return
-// // function sayHello() {
-// //   console.log("Hey Students");
-// // }
-// // sayHello();
+// // function-: reusable block of code hota hai jiska kaam kisi particular task ko karana hota hai
+// // Normal function without return
+// function sayHello() {
+//   console.log("Hey Students");
+// }
+// sayHello();
 
 // // // Normal function with return
 // // function companyDetails(cName) {

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Display API Data</title>
+  <style>
+    body { font-family: Arial; margin: 2em; }
+    .card {
+      background: #f0f0f0;
+      padding: 1.5em;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Post Details</h1>
+  <div id="dataContainer" class="card"></div>
+
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    const postId = getQueryParam('postId');
+
+    if (postId) {
+      fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('dataContainer').innerHTML = `
+            <h2>${data.title}</h2>
+            <p>${data.body}</p>
+            <small><strong>ID:</strong> ${data.id}</small>
+          `;
+        })
+        .catch(error => {
+          document.getElementById('dataContainer').innerHTML = `<p>Error fetching data.</p>`;
+          console.error('Error:', error);
+        });
+    } else {
+      document.getElementById('dataContainer').innerHTML = `<p>No post ID provided in URL.</p>`;
+    }
+  </script>
+</body>
+</html>

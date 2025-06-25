@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(56, 56, 241);
+    margin-top: 180px;
+   
+}
+
+#mainDiv{
+    height: 250px;
+    width: 300px;
+    background-color: white;
+    padding: 10px;
+    color: black;
+    border-radius: 30px;
+     margin: 0 auto;
+}
+
+#btn{
+    padding: 5px;
+    background-color: rgb(55, 214, 55);
+    color: black;   
+}
+#remove{
+    padding: 5px;
+    background-color: rgb(226, 42, 42);
+    color: rgb(255, 255, 255);
+}

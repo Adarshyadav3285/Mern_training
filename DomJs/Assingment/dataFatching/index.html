@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>API Fetch - Redirect</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 2em; }
+    button { padding: 1em 2em; font-size: 1em; }
+  </style>
+</head>
+<body>
+  <h1>Fetch and View Data</h1>
+  <button onclick="goToDataPage()">Go to Post</button>
+
+  <script>
+    function goToDataPage() {
+      const postId = 1; // you can make this dynamic too
+      window.location.href = `data.html?postId=${postId}`;
+    }
+  </script>
+</body>
+</html>
